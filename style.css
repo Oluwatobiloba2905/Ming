@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background: linear-gradient(135deg, #0d0d0d, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #787070;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 24px;
+}
+
+.claim-section {
+    margin: 30px 0;
+}
+
+.claim-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#claimButton {
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#claimButton:hover {
+    background-color: #0056b3;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #eae7e7;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 10px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #322c8d;
+    border-radius: 5px;
+}
+
+.stats-section {
+    margin-top: 30px;
+}
+
+.stat {
+    margin: 10px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
