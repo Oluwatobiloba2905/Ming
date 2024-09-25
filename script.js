@@ -13,7 +13,10 @@ document.getElementById("claimButton").addEventListener("click", () => {
         document.getElementById("progress").style.width = `${(claimedTokens / totalTokens) * 100}%`;
         document.getElementById("tokensEarned").innerText = tokensEarned;
 
+        // Simulate claim time reduction
+        document.getElementById("nextClaimTime").innerText = "1h 20m";
 
+        alert('You claimed 10 tokens!');
     } else {
         alert('No more tokens to claim!');
     }

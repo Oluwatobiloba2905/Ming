@@ -2,16 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #0d0d0d, #000000);
+    background-color: #1d1f27;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-size: 16px;
 }
 
 .container {
@@ -25,67 +26,95 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #787070;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
+    padding: 15px 0;
+    background-color: #333;
+    border-radius: 8px;
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4ab3f4;
 }
 
 .menu-icon {
-    font-size: 24px;
+    font-size: 28px;
+    color: #fff;
 }
 
-.claim-section {
-    margin: 30px 0;
+.hero-section {
+    margin-top: 30px;
 }
 
-.claim-section h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.hero-title {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-#claimButton {
-    background-color: #007bff;
-    color: rgb(255, 255, 255);
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d1d5db;
+}
+
+.claim-button {
+    background-color: #4ab3f4;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 16px;
-    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 25px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-#claimButton:hover {
-    background-color: #0056b3;
+.claim-button:hover {
+    background-color: #3a93c8;
+}
+
+.progress-container {
+    margin-top: 20px;
+    background-color: #2d2f3a;
+    border-radius: 12px;
+    padding: 8px;
 }
 
 .progress-bar {
     width: 100%;
-    background-color: #eae7e7;
-    border-radius: 5px;
-    margin-top: 20px;
-    height: 10px;
-    position: relative;
+    background-color: #333;
+    border-radius: 10px;
+    height: 15px;
 }
 
 .progress {
     height: 100%;
     width: 0;
-    background-color: #322c8d;
-    border-radius: 5px;
+    background-color: #4ab3f4;
+    border-radius: 10px;
+    transition: width 0.5s ease;
 }
 
 .stats-section {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-.stat {
-    margin: 10px 0;
-    font-size: 18px;
+.stat-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background-color: #2d2f3a;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 10px 0;
+}
+
+.stat-label {
+    color: #d1d5db;
+    font-size: 16px;
+}
+
+.stat-value {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4ab3f4;
 }

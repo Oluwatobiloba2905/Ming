@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mining Platform</title>
+    <title>Token Mining Platform</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,32 +12,35 @@
     <div class="container">
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <div class="logo">MiningPlatform</div>
-            <!-- <div class="menu-icon">☰</div> -->
+            <div class="logo">BLUM</div>
+            <div class="menu-icon">☰</div>
         </nav>
 
-        <!-- Token Claim Section -->
-        <section class="claim-section">
-            <h1>Claim Your Tokens</h1>
-            <button id="claimButton">Claim Tokens</button>
-            <div class="progress-bar">
-                <div class="progress" id="progress"></div>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Mine Tokens Easily</h1>
+            <p class="hero-description">Claim your tokens and track your progress.</p>
+            <button id="claimButton" class="claim-button">Claim Tokens</button>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
             </div>
         </section>
 
-        <!-- Mining Stats Section -->
+        <!-- Stats Section -->
         <section class="stats-section">
-            <div class="stat">
-                <p>Tokens Earned:</p>
-                <span id="tokensEarned">0</span>
+            <div class="stat-item">
+                <span class="stat-label">Tokens Earned</span>
+                <span class="stat-value" id="tokensEarned">0</span>
             </div>
-            <div class="stat">
-                <p>Next Claim Time:</p>
-                <span id="nextClaimTime">2h 30m</span>
+            <div class="stat-item">
+                <span class="stat-label">Next Claim Time</span>
+                <span class="stat-value" id="nextClaimTime">2h 30m</span>
             </div>
-            <div class="stat">
-                <p>Total Participants:</p>
-                <!-- <span id="participants">500</span> -->
+            <div class="stat-item">
+                <span class="stat-label">Total Participants</span>
+                <span class="stat-value" id="participants">500</span>
             </div>
         </section>
     </div>
