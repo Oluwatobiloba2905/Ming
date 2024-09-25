@@ -1,7 +1,20 @@
-// Initial values
+// Initial values for mining logic
 let tokensEarned = 0;
 const totalTokens = 100;
 let claimedTokens = 0;
+
+// Open full-page menu
+const menuIcon = document.getElementById('menuIcon');
+const fullpageMenu = document.getElementById('fullpageMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+menuIcon.addEventListener('click', () => {
+    fullpageMenu.classList.add('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    fullpageMenu.classList.remove('active');
+});
 
 // Claim button click handler
 document.getElementById("claimButton").addEventListener("click", () => {

@@ -31,15 +31,54 @@ body {
     border-radius: 8px;
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #4ab3f4;
+.logo img {
+    height: 40px;
 }
 
 .menu-icon {
     font-size: 28px;
     color: #fff;
+    cursor: pointer;
+}
+
+.fullpage-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullpage-menu.active {
+    display: flex;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu-links {
+    list-style-type: none;
+}
+
+.menu-links li {
+    margin: 20px 0;
+}
+
+.menu-links li a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 .hero-section {
