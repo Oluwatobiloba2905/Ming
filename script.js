@@ -1,9 +1,48 @@
-// Initial values for mining logic
-let tokensEarned = 0;
-const totalTokens = 100;
-let claimedTokens = 0;
+let isMining = false;
+let countdownTime = 10800; // 3 hours in seconds
+let coinsEarned = 0;
+const totalCoins = 30000; // LGBTQ Coins to mine
 
-// Open full-page menu
+const actionButton = document.getElementById('actionButton');
+const countdownDisplay = document.getElementById('countdown');
+const progressBar = document.getElementById('progress');
+const totalCoinsDisplay = document.getElementById('totalCoins');
+
+function updateCountdown() {
+    const hours = Math.floor(countdownTime / 3600);
+    const minutes = Math.floor((countdownTime % 3600) / 60);
+    const seconds = countdownTime % 60;
+
+    countdownDisplay.textContent = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+    // Update progress bar
+    progressBar.style.width = `${((10800 - countdownTime) / 10800) * 100}%`;
+
+    if (countdownTime === 0) {
+        clearInterval(timer);
+        actionButton.textContent = 'CLAIM';
+        isMining = false;
+    }
+
+    countdownTime--;
+}
+
+let timer;
+
+actionButton.addEventListener('click', () => {
+    if (!isMining) {
+        isMining = true;
+        actionButton.textContent = 'Mining...';
+        timer = setInterval(updateCountdown, 1000);
+    } else if (countdownTime === 0) {
+        coinsEarned += totalCoins;
+        totalCoinsDisplay.textContent = coinsEarned;
+        countdownTime = 10800; // Reset for next mining session
+        actionButton.textContent = 'Start';
+    }
+});
+
+// Menu functionality
 const menuIcon = document.getElementById('menuIcon');
 const fullpageMenu = document.getElementById('fullpageMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -14,23 +53,4 @@ menuIcon.addEventListener('click', () => {
 
 closeMenu.addEventListener('click', () => {
     fullpageMenu.classList.remove('active');
-});
-
-// Claim button click handler
-document.getElementById("claimButton").addEventListener("click", () => {
-    if (claimedTokens < totalTokens) {
-        claimedTokens += 100; // Increase claimed tokens by 10
-        tokensEarned += 10;
-
-        // Update progress bar and stats
-        document.getElementById("progress").style.width = `${(claimedTokens / totalTokens) * 100}%`;
-        document.getElementById("tokensEarned").innerText = tokensEarned;
-
-        // Simulate claim time reduction
-        document.getElementById("nextClaimTime").innerText = "1h 20m";
-
-        // alert('You claimed 10 tokens!');
-    } else {
-        alert('No more tokens to claim!');
-    }
 });
